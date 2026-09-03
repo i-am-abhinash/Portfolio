@@ -113,7 +113,7 @@ if (canvasContainer && typeof THREE !== 'undefined' && !prefersReducedMotion) {
     canvasContainer.appendChild(renderer.domElement);
 
     // Create a network topology geometry
-    const particleCount = window.innerWidth < 768 ? 80 : 250; // Reduce on mobile
+    const particleCount = window.innerWidth < 768 ? 40 : 100; // Reduce on mobile
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const velocities = [];
@@ -135,7 +135,7 @@ if (canvasContainer && typeof THREE !== 'undefined' && !prefersReducedMotion) {
 
     // Material for nodes (particles)
     const particleMaterial = new THREE.PointsMaterial({
-        color: 0x00E5FF,
+        color: 0x00D2B4,
         size: 2,
         transparent: true,
         opacity: 0.6,
@@ -147,7 +147,7 @@ if (canvasContainer && typeof THREE !== 'undefined' && !prefersReducedMotion) {
 
     // Material for connections (edges)
     const lineMaterial = new THREE.LineBasicMaterial({
-        color: 0x00E5FF,
+        color: 0x00D2B4,
         transparent: true,
         opacity: 0.05
     });
@@ -211,7 +211,7 @@ if (canvasContainer && typeof THREE !== 'undefined' && !prefersReducedMotion) {
                 const distSq = dx * dx + dy * dy + dz * dz;
 
                 // Max connection distance squared
-                if (distSq < 15000) { 
+                if (distSq < 25000) { 
                     linePositions.push(
                         positions[i * 3], positions[i * 3 + 1], positions[i * 3 + 2],
                         positions[j * 3], positions[j * 3 + 1], positions[j * 3 + 2]

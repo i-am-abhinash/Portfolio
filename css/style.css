@@ -5,7 +5,9 @@
     --bg-dark: #050508;
     --text-primary: #F0F0F5;
     --text-secondary: #8E8E9F;
-    --accent: #00E5FF;
+    --accent: #00D2B4; /* Teal */
+    --accent-amber: #FFB000; /* Amber */
+    --surface-plain: #0a0a0f;
     --surface-glass: rgba(15, 15, 25, 0.4);
     --border-color: rgba(255, 255, 255, 0.1);
     
@@ -35,7 +37,7 @@ body {
 }
 
 ::selection {
-    background: rgba(0, 229, 255, 0.3);
+    background: rgba(0, 210, 180, 0.3);
     color: #fff;
 }
 
@@ -130,7 +132,7 @@ p {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.85rem;
-    text-transform: uppercase;
+    
     letter-spacing: 0.05em;
     transition: color 0.3s ease;
 }
@@ -188,7 +190,7 @@ p {
     font-family: var(--font-display);
     font-size: 1.5rem;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    
 }
 
 /* Buttons */
@@ -202,7 +204,7 @@ p {
     transition: all 0.3s ease;
     border: 1px solid transparent;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+    
     cursor: pointer;
 }
 
@@ -244,8 +246,8 @@ p {
 }
 
 .tilt-card:hover {
-    border-color: rgba(0, 229, 255, 0.3);
-    box-shadow: 0 10px 40px rgba(0, 229, 255, 0.03);
+    border-color: rgba(0, 210, 180, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 210, 180, 0.03);
 }
 
 /* 3D Canvas */
@@ -313,9 +315,9 @@ p {
 .role-tag {
     font-size: 0.85rem;
     padding: 0.4rem 1rem;
-    background: rgba(0, 229, 255, 0.05);
+    background: rgba(0, 210, 180, 0.05);
     color: var(--accent);
-    border: 1px solid rgba(0, 229, 255, 0.2);
+    border: 1px solid rgba(0, 210, 180, 0.2);
     border-radius: 4px;
     letter-spacing: 0.05em;
 }
@@ -356,9 +358,9 @@ p {
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.7); }
-    70% { box-shadow: 0 0 0 6px rgba(0, 229, 255, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(0, 210, 180, 0.7); }
+    70% { box-shadow: 0 0 0 6px rgba(0, 210, 180, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 210, 180, 0); }
 }
 
 .hero-actions {
@@ -398,13 +400,13 @@ p {
 .hud-container {
     display: flex;
     background: rgba(15, 15, 25, 0.4);
-    border: 1px solid rgba(0, 229, 255, 0.2);
+    border: 1px solid rgba(0, 210, 180, 0.2);
     border-radius: 8px;
     padding: 1.5rem;
     gap: 1.5rem;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(0, 229, 255, 0.05);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(0, 210, 180, 0.05);
     position: relative;
     clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); /* Cut corners */
 }
@@ -509,8 +511,8 @@ p {
     left: 2.5rem;
     right: -1rem;
     bottom: -1rem;
-    background: rgba(0, 229, 255, 0.03);
-    border: 1px solid rgba(0, 229, 255, 0.15);
+    background: rgba(0, 210, 180, 0.03);
+    border: 1px solid rgba(0, 210, 180, 0.15);
     border-radius: 2px;
     z-index: 0;
     transition: transform 0.4s ease;
@@ -580,7 +582,7 @@ p {
 
 .meta-badge {
     background: rgba(5, 5, 8, 0.95);
-    border: 1px solid rgba(0, 229, 255, 0.3);
+    border: 1px solid rgba(0, 210, 180, 0.3);
     padding: 0.4rem 0.8rem;
     font-size: 0.75rem;
     letter-spacing: 0.1em;
@@ -692,7 +694,7 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    border: 1px solid rgba(0, 229, 255, 0.2);
+    border: 1px solid rgba(0, 210, 180, 0.2);
 }
 
 .project-meta {
@@ -846,7 +848,7 @@ p {
 
 .node:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 210, 180, 0.1);
 }
 
 .llm-stack, .core-stack, .output-stack {
@@ -857,7 +859,7 @@ p {
 }
 
 .sdk-node {
-    border-color: rgba(0, 229, 255, 0.5);
+    border-color: rgba(0, 210, 180, 0.5);
     color: var(--accent);
 }
 
@@ -866,9 +868,9 @@ p {
 }
 
 @keyframes soft-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.2); }
-    50% { box-shadow: 0 0 15px 5px rgba(0, 229, 255, 0.1); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(0, 210, 180, 0.2); }
+    50% { box-shadow: 0 0 15px 5px rgba(0, 210, 180, 0.1); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 210, 180, 0); }
 }
 
 .viz-connector {
@@ -1037,8 +1039,8 @@ p {
 }
 
 .chip:hover {
-    border-color: rgba(0, 229, 255, 0.4);
-    background: rgba(0, 229, 255, 0.05);
+    border-color: rgba(0, 210, 180, 0.4);
+    background: rgba(0, 210, 180, 0.05);
 }
 
 /* =========================================
@@ -1098,7 +1100,7 @@ p {
 }
 
 .cert-item:hover {
-    background: rgba(0, 229, 255, 0.03);
+    background: rgba(0, 210, 180, 0.03);
 }
 
 .cert-name {
@@ -1325,3 +1327,6 @@ p {
         animation: none;
     }
 }
+
+.surface-panel { background: var(--surface-plain); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 6px; }
+
